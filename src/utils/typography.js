@@ -1,17 +1,31 @@
 import Typography from "typography"
-import Wordpress2016 from "typography-theme-wordpress-2016"
 
-Wordpress2016.overrideThemeStyles = () => {
-  return {
-    "a.gatsby-resp-image-link": {
-      boxShadow: `none`,
+const typography = new Typography({
+  baseFontSize: "18px",
+  baseLineHeight: 1.666,
+  scaleRatio: 2.5,
+  googleFonts: [
+    { name: "Oswald", styles: ["400", "700"] },
+    { name: "Libre Baskerville", styles: ["400", "400i", "700"] },
+  ],
+  headerFontFamily: ["Oswald", "sans-serif"],
+  bodyFontFamily: ["Libre Baskerville", "serif"],
+  overrideStyles: ({ adjustFontSizeTo, rhythm }, options, styles) => ({
+    body: {
+      backgroundColor: "rgba(0,0,0,0.05)",
     },
-  }
-}
-
-delete Wordpress2016.googleFonts
-
-const typography = new Typography(Wordpress2016)
+    "h1, h2, h3, h4, h5, h6": {
+      textTransform: "uppercase",
+    },
+    a: {
+      color: "rgba(0,0,0,0.8)",
+      textDecorationColor: "rgba(0,0,0,0.2)",
+    },
+    "a:hover": {
+      textDecorationColor: "rgba(0,0,0,0.8)",
+    },
+  }),
+})
 
 // Hot reload typography in development.
 if (process.env.NODE_ENV !== `production`) {
