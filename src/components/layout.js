@@ -11,7 +11,6 @@ const Layout = ({ location, title, children }) => {
     header = (
       <h1
         style={{
-          ...scale(1.5),
           marginBottom: rhythm(1.5),
           marginTop: 0,
         }}
@@ -39,7 +38,6 @@ const Layout = ({ location, title, children }) => {
           style={{
             boxShadow: `none`,
             textDecoration: `none`,
-            color: `inherit`,
           }}
           to={`/`}
         >
@@ -61,9 +59,9 @@ const Layout = ({ location, title, children }) => {
       <main>{children}</main>
       <footer>
         <a href="https://twitter.com/jesseflorig">Twitter</a>
-        {` || `}
+        <code> || </code>
         <a href="https://github.com/jesseflorig">GitHub</a>
-        {` || `}
+        <code> || </code>
         <a href="https://stackoverflow.com/jesseflorig">StackOverflow</a>
       </footer>
     </div>

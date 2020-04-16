@@ -12,17 +12,21 @@ const typography = new Typography({
   bodyFontFamily: ["Libre Baskerville", "serif"],
   overrideStyles: ({ adjustFontSizeTo, rhythm }, options, styles) => ({
     body: {
-      backgroundColor: "rgba(0,0,0,0.05)",
+      backgroundColor: "rgba(0,0,0,0.1)",
     },
     "h1, h2, h3, h4, h5, h6": {
       textTransform: "uppercase",
     },
     a: {
-      color: "rgba(0,0,0,0.8)",
-      textDecorationColor: "rgba(0,0,0,0.2)",
+      color: "rgba(0,0,0,0.6)",
+      textDecorationColor: "rgba(0,0,0,0.1)",
     },
     "a:hover": {
+      color: "rgba(0,0,0,0.8)",
       textDecorationColor: "rgba(0,0,0,0.8)",
+    },
+    "h3 a": {
+      color: "rgba(0, 0, 0, 0.6)",
     },
   }),
 })
