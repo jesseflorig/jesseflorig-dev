@@ -56,7 +56,7 @@ const Bio = () => {
       />
       <p>
         Written by <strong>{author}</strong>.<br />
-        🍑💨
+        Based out of Washington, DC.
       </p>
     </div>
   )
