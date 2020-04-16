@@ -62,7 +62,7 @@ const Layout = ({ location, title, children }) => {
         <code> || </code>
         <a href="https://github.com/jesseflorig">GitHub</a>
         <code> || </code>
-        <a href="https://stackoverflow.com/jesseflorig">StackOverflow</a>
+        <a href="https://stackoverflow.com/users/152493/jesse">StackOverflow</a>
       </footer>
     </div>
   )
