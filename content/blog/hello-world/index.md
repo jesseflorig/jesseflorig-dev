@@ -6,6 +6,17 @@ description: "Hello World"
 
 This is my first post on my new fake blog! How exciting!
 
+```bash
+#test.sh
+echo "hello world"
+```
+
+Or in js:
+```javascript
+// test.js
+console.log("hello world");
+```
+
 I'm sure I'll write a lot more interesting things in the future.
 
 Oh, and here's a great quote from this Wikipedia on
