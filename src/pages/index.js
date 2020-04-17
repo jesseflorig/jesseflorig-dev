@@ -30,9 +30,10 @@ const BlogIndex = ({ data, location }) => {
                   {title}
                 </Link>
               </h3>
-              <small>{`${node.frontmatter.date} – ${formatReadingTime(
-                node.timeToRead
-              )}`}</small>
+              <small>
+                {`${node.frontmatter.date} – `}
+                {formatReadingTime(node.timeToRead)}
+              </small>
             </header>
             <section>
               <p
