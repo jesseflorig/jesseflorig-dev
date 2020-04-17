@@ -57,7 +57,7 @@ const Bio = () => {
       />
       <p>
         Written by <strong>{author}</strong>.<br />
-        Powered by coffee &amp; rice.
+        Powered by coffee.
       </p>
     </div>
   )
