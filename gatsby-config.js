@@ -66,36 +66,6 @@ module.exports = {
     },
     `gatsby-plugin-feed`,
     {
-      resolve: `gatsby-plugin-ebook`,
-      options: {
-        filename: "jesseflorig-dev.epub",
-        query: `
-          {
-            site {
-              siteMetadata {
-                title
-                author
-              }
-            }
-            allMarkdownRemark(
-              sort: { fields: frontmatter___date, order: ASC },
-            ) {
-              edges {
-                node {
-                  id
-                  fileAbsolutePath
-                  rawMarkdownBody
-                  frontmatter {
-                    title
-                    date
-                  }
-                }
-              }
-            }
-          }`,
-      },
-    },
-    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `jesseflorig.dev`,
