@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import { formatReadingTime } from "../utils/formatUtils"
 
 import Bio from "../components/Bio"
 import Layout from "../components/Layout"
@@ -29,7 +30,9 @@ const BlogIndex = ({ data, location }) => {
                   {title}
                 </Link>
               </h3>
-              <small>{node.frontmatter.date}</small>
+              <small>{`${node.frontmatter.date} – ${formatReadingTime(
+                node.timeToRead
+              )}`}</small>
             </header>
             <section>
               <p
@@ -61,6 +64,7 @@ export const pageQuery = graphql`
           fields {
             slug
           }
+          timeToRead
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
