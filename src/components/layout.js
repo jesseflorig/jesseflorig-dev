@@ -57,7 +57,12 @@ const Layout = ({ location, title, children }) => {
     >
       <header>{header}</header>
       <main>{children}</main>
-      <footer style={{ display: `flex`, justifyContent: `space-between` }}>
+      <footer
+        style={{
+          display: `flex`,
+          justifyContent: `space-between`,
+        }}
+      >
         <div
           style={{
             display: `flex`,

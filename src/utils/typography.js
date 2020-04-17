@@ -11,7 +11,7 @@ const typography = new Typography({
   ],
   headerFontFamily: ["Oswald", "sans-serif"],
   bodyFontFamily: ["Libre Baskerville", "serif"],
-  overrideStyles: ({ adjustFontSizeTo, rhythm }, options, styles) => ({
+  overrideStyles: () => ({
     body: {
       backgroundColor: "rgba(0,0,0,0.1)",
     },
@@ -28,6 +28,9 @@ const typography = new Typography({
     },
     "h3 a": {
       color: "rgba(0, 0, 0, 0.6)",
+    },
+    footer: {
+      fontSize: "0.8em",
     },
     ".gatsby-highlight-code-line": {
       display: "block",

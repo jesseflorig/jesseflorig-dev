@@ -9,8 +9,14 @@ import { rhythm, scale } from "../utils/typography"
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
+  const { slug } = post.fields
   const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
+
+  const discussUrl = `https://mobile.twitter.com/search?q=${encodeURIComponent(
+    `https://jesseflorig.dev${slug}`
+  )}`
+  console.log(discussUrl)
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -40,6 +46,13 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           </p>
         </header>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
+        <footer>
+          <ul style={{ listStyle: `none`, margin: 0 }}>
+            <li>
+              <a href={discussUrl}>Discuss on Twitter</a>
+            </li>
+          </ul>
+        </footer>
         <hr
           style={{
             marginBottom: rhythm(1),
@@ -105,6 +118,9 @@ export const pageQuery = graphql`
       excerpt(pruneLength: 160)
       html
       timeToRead
+      fields {
+        slug
+      }
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
