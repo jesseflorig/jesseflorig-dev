@@ -4,17 +4,32 @@ date: "2015-05-01T22:12:03.284Z"
 description: "Hello World"
 ---
 
-This is my first post on my new fake blog! How exciting!
+This is my first post on my new `js≈fake>=real` blog! How exciting!
 
-```bash
+```sh
 #test.sh
 echo "hello world"
+git commit -am "commit message"
 ```
 
 Or in js:
-```javascript
+```js
 // test.js
+const isCode = a !== b; //highlight-line
 console.log("hello world");
+```
+
+```js
+switch(var){
+  case "one":
+    return 1
+  //highlight-start
+  case "two":
+    return 2
+  //highlight-end
+  default:
+    return "default"
+}
 ```
 
 I'm sure I'll write a lot more interesting things in the future.

@@ -7,6 +7,7 @@ const typography = new Typography({
   googleFonts: [
     { name: "Oswald", styles: ["400", "700"] },
     { name: "Libre Baskerville", styles: ["400", "400i", "700"] },
+    { name: "Fira Code", styles: ["400", "700"] },
   ],
   headerFontFamily: ["Oswald", "sans-serif"],
   bodyFontFamily: ["Libre Baskerville", "serif"],
@@ -27,6 +28,13 @@ const typography = new Typography({
     },
     "h3 a": {
       color: "rgba(0, 0, 0, 0.6)",
+    },
+    ".gatsby-highlight-code-line": {
+      display: "block",
+      borderLeft: "0.5em solid #a5e844",
+      backgroundColor: "rgba(255,255,255, 0.1)",
+      margin: "0 -1em",
+      padding: ".2em 1em 0.2em 0.5em",
     },
   }),
 })
