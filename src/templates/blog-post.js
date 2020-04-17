@@ -16,7 +16,10 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
   const discussUrl = `https://mobile.twitter.com/search?q=${encodeURIComponent(
     `https://jesseflorig.dev${slug}`
   )}`
-  console.log(discussUrl)
+  const editUrl = `https://github.com/jesseflorig/jesseflorig-dev/edit/master/src/pages/${slug.slice(
+    1,
+    slug.length - 1
+  )}/index.md`
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -47,14 +50,14 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         </header>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
         <footer>
-          <ul style={{ listStyle: `none`, margin: 0 }}>
-            <li>
-              <a href={discussUrl}>Discuss on Twitter</a>
-            </li>
-          </ul>
+          <a href={discussUrl}>Discuss on Twitter</a>
+          <a href={editUrl} style={{ marginLeft: "1em" }}>
+            Edit on GitHub
+          </a>
         </footer>
         <hr
           style={{
+            marginTop: rhythm(1 / 2),
             marginBottom: rhythm(1),
           }}
         />
