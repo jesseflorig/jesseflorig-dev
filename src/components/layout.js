@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import { rhythm, scale } from "../utils/typography"
+import { rhythm } from "../utils/typography"
 
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
@@ -57,12 +57,23 @@ const Layout = ({ location, title, children }) => {
     >
       <header>{header}</header>
       <main>{children}</main>
-      <footer>
-        <a href="https://twitter.com/jesseflorig">Twitter</a>
-        <code> || </code>
-        <a href="https://github.com/jesseflorig">GitHub</a>
-        <code> || </code>
-        <a href="https://stackoverflow.com/users/152493/jesse">StackOverflow</a>
+      <footer style={{ display: `flex`, justifyContent: `space-between` }}>
+        <div
+          style={{
+            display: `flex`,
+            justifyContent: `space-between`,
+            width: `45%`,
+          }}
+        >
+          <a href="https://twitter.com/jesseflorig">Twitter</a>
+          <a href="https://github.com/jesseflorig">GitHub</a>
+          <a href="https://stackoverflow.com/users/152493/jesse">
+            StackOverflow
+          </a>
+        </div>
+        <div>
+          <a href="https://jesseflorig.dev/rss.xml">RSS</a>
+        </div>
       </footer>
     </div>
   )
