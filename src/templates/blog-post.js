@@ -35,7 +35,8 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
               marginBottom: rhythm(1),
             }}
           >
-            {`${post.frontmatter.date} – ${formatReadingTime(post.timeToRead)}`}
+            {`${post.frontmatter.date} – `}
+            {formatReadingTime(post.timeToRead)}
           </p>
         </header>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
