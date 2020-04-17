@@ -64,7 +64,12 @@ module.exports = {
         //trackingId: `ADD YOUR TRACKING ID HERE`,
       },
     },
-    `gatsby-plugin-feed`,
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        feeds: [{ output: "/rss.xml", title: "JESSEFLORIG.DEV - RSS Feed" }],
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
