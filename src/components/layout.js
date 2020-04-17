@@ -62,7 +62,7 @@ const Layout = ({ location, title, children }) => {
           style={{
             display: `flex`,
             justifyContent: `space-between`,
-            width: `45%`,
+            width: `17em`,
           }}
         >
           <a href="https://twitter.com/jesseflorig">Twitter</a>
