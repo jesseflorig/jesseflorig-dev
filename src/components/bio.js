@@ -48,7 +48,8 @@ const Bio = () => {
           marginRight: rhythm(1 / 2),
           marginBottom: 0,
           minWidth: 50,
-          borderRadius: `100%`,
+          border: `1px solid rgba(0,0,0,0.4)`,
+          borderRadius: `50%`,
         }}
         imgStyle={{
           borderRadius: `50%`,
@@ -56,7 +57,7 @@ const Bio = () => {
       />
       <p>
         Written by <strong>{author}</strong>.<br />
-        Based out of Washington, DC.
+        Powered by coffee &amp; rice.
       </p>
     </div>
   )
