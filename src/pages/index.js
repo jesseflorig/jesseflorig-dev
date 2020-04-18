@@ -1,9 +1,9 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import { formatReadingTime } from "../utils/formatUtils"
 
 import Bio from "../components/Bio"
 import Layout from "../components/Layout"
+import Meta from "../components/Meta"
 import SEO from "../components/SEO"
 import { rhythm } from "../utils/typography"
 import "../utils/prism-material-dark.css"
@@ -31,10 +31,7 @@ const BlogIndex = ({ data, location }) => {
                 </Link>
               </h3>
               <small>
-                {node.frontmatter.date}
-                <span style={{ marginLeft: `1.2em` }}>
-                  {formatReadingTime(node.timeToRead)}
-                </span>
+                <Meta date={node.frontmatter.date} readTime={node.timeToRead} />
               </small>
             </header>
             <section>

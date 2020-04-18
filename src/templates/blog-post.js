@@ -1,9 +1,9 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import { formatReadingTime } from "../utils/formatUtils"
 
 import Bio from "../components/Bio"
 import Layout from "../components/Layout"
+import Meta from "../components/Meta"
 import SEO from "../components/SEO"
 import { rhythm, scale } from "../utils/typography"
 
@@ -44,8 +44,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
               marginBottom: rhythm(1),
             }}
           >
-            {`${post.frontmatter.date} – `}
-            {formatReadingTime(post.timeToRead)}
+            <Meta date={post.frontmatter.date} readTime={post.timeToRead} />
           </p>
         </header>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
