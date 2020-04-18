@@ -1,5 +1,5 @@
 import { useState } from "react"
-const LOCAL_THEME_KEY = "preferredTheme"
+const LOCAL_THEME_KEY = "florigPreferredTheme"
 
 function getTheme() {
   return window.localStorage.getItem(LOCAL_THEME_KEY)
