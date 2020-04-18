@@ -4,13 +4,15 @@ import useWindowTheme from "../utils/useWindowTheme"
 export default function ThemeToggle({ checked, label, onChange }) {
   const [theme, toggleTheme] = useWindowTheme()
   const id = "theme-toggle"
+  const isDarkTheme = theme === "dark"
+  const labelText = `Switch to ${isDarkTheme ? "light" : "dark"} theme`
   return (
     <div>
       <input
         id={id}
         type="checkbox"
         style={{ display: `none` }}
-        checked={theme === "dark"}
+        checked={isDarkTheme}
         onChange={toggleTheme}
       />
       <label
@@ -22,7 +24,8 @@ export default function ThemeToggle({ checked, label, onChange }) {
           padding: `0.4em`,
           cursor: `pointer`,
         }}
-        aria-label="Toggle Theme"
+        aria-label={labelText}
+        title={labelText}
       >
         <svg style={{ width: `1.2em`, height: `1.2em` }} viewBox="0 0 24 24">
           <path
