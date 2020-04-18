@@ -40,4 +40,4 @@ I'd personally appreciate any feedback that improves this section.
 
 ## Conclusion
 
-So that's it. Now it's time to get to some code. I hope to see you around!
+So that's it. Now we can get to some code. I hope to see you around!
