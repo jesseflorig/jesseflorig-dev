@@ -29,6 +29,20 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: `gatsby-remark-acronyms`,
+            options: {
+              acronyms: {
+                a11y: `accessibility`,
+                CSS: `Cascading Style Sheets`,
+                HTML: `Hypertext Markup Language`,
+                i18n: `internationalization`,
+                JS: `JavaScript`,
+                OBE: `Overcome By Events`,
+                TBD: `To Be Determined`,
+              },
+            },
+          },
+          {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 590,

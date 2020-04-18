@@ -11,7 +11,7 @@ const typography = new Typography({
   ],
   headerFontFamily: ["Oswald", "sans-serif"],
   bodyFontFamily: ["Libre Baskerville", "serif"],
-  overrideStyles: () => ({
+  overrideStyles: ({ rhythm }) => ({
     body: {
       color: "rgba(0,0,0,0.7)",
       backgroundColor: "rgba(0,0,0,0.1)",
@@ -32,6 +32,12 @@ const typography = new Typography({
     },
     "h3 a": {
       color: "rgba(0, 0, 0, 0.6)",
+    },
+    blockquote: {
+      marginLeft: 0,
+      paddingLeft: rhythm(1),
+      borderLeft: ".2em solid currentColor",
+      fontStyle: "italic",
     },
     footer: {
       fontSize: "0.8em",
