@@ -1,18 +1,16 @@
 import React from "react"
-import { Link } from "gatsby"
-
 import { rhythm } from "../utils/typography"
+import { Link } from "gatsby"
+import ThemeToggle from "./ThemeToggle"
 
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
-  let header
 
-  if (location.pathname === rootPath) {
-    header = (
+  const header =
+    location.pathname === rootPath ? (
       <h1
         style={{
-          marginBottom: rhythm(1.5),
-          marginTop: 0,
+          margin: 0,
         }}
       >
         <Link
@@ -26,12 +24,10 @@ const Layout = ({ location, title, children }) => {
           {title}
         </Link>
       </h1>
-    )
-  } else {
-    header = (
+    ) : (
       <h3
         style={{
-          marginTop: 0,
+          margin: 0,
         }}
       >
         <Link
@@ -45,7 +41,7 @@ const Layout = ({ location, title, children }) => {
         </Link>
       </h3>
     )
-  }
+
   return (
     <div
       style={{
@@ -55,7 +51,17 @@ const Layout = ({ location, title, children }) => {
         padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
       }}
     >
-      <header>{header}</header>
+      <header
+        style={{
+          display: `flex`,
+          alignItems: `flex-st`,
+          justifyContent: `space-between`,
+          marginBottom: `2em`,
+        }}
+      >
+        {header}
+        <ThemeToggle />
+      </header>
       <main>{children}</main>
       <footer
         style={{
