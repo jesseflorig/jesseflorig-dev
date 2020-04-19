@@ -42,11 +42,14 @@ const typography = new Typography({
     footer: {
       fontSize: "0.8em",
     },
+    ".gatsby-highlight": {
+      marginBottom: rhythm(1),
+    },
     ".gatsby-highlight-code-line": {
       display: "block",
       borderLeft: "0.5em solid #a5e844",
       backgroundColor: "rgba(255,255,255, 0.1)",
-      margin: "0 -1em",
+      margin: `0 -1em`,
       padding: ".2em 1em 0.2em 0.5em",
     },
     // Dark mode styles

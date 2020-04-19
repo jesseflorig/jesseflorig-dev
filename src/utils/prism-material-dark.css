@@ -13,7 +13,7 @@ pre[class*="language-"] {
 	word-break: normal;
 	word-wrap: normal;
 	color: #ddd;
-	background: #2f2f2f;
+	background: rgba(0,0,0,0.8);
 	border-radius: 0.2em;
 	font-family: "Fira Code", monospace;
 	font-size: 1em;
@@ -41,9 +41,13 @@ pre[class*="language-"] ::selection {
 	background: #363636;
 }
 
+pre > code[class*="language-"] {
+  background: none;
+}
+
 :not(pre) > code[class*="language-"] {
 	white-space: normal;
-  background: #2f2f2f;
+  background: rgba(0,0,0,0.6);
 	border-radius: 0.2em;
 	padding: 0.1em 0.3em;
 }
@@ -141,3 +145,4 @@ pre[class*="language-"] {
 .token.variable {
 	color: #ff6666;
 }
+
