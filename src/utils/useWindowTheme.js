@@ -11,29 +11,28 @@ function getLocalTheme() {
 }
 
 function setLocalTheme(newTheme) {
-  //
   if (typeof window !== `undefined`) {
     window.localStorage.setItem(LOCAL_THEME_KEY, newTheme)
   }
 }
 
 function setBodyClass(newClass) {
-  //
   if (typeof document !== `undefined`) {
     document.body.className = newClass
   }
 }
 
-export default function useWindowTheme(defaultTheme = DEFAULT_THEME) {
-  const [theme, setTheme] = useState(getLocalTheme() || defaultTheme)
-  setBodyClass(theme)
+export default function useWindowTheme() {
+  const localTheme = getLocalTheme()
+  const [theme, setTheme] = useState(localTheme)
 
   const toggleTheme = () => {
     const newTheme = theme === DEFAULT_THEME ? ALTERNATE_THEME : DEFAULT_THEME
     setTheme(newTheme)
     setLocalTheme(newTheme)
-    setBodyClass(newTheme)
   }
+
+  setBodyClass(theme)
 
   return [theme, toggleTheme]
 }
