@@ -61,7 +61,7 @@ module.exports = {
                 sh: "bash",
                 js: "javascript",
               },
-              inlineCodeMarker: `≈`,
+              inlineCodeMarker: `±`, // OPT + SHIFT + '='
             },
           },
           `gatsby-remark-copy-linked-files`,
