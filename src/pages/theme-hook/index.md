@@ -1,7 +1,7 @@
 ---
 title: Creating a simple theme hook
 date: "2020-01-04"
-description: "Lets create a persistent page theme using React hooks."
+description: "Let's create a persistent page theme using React hooks."
 ---
 
 When setting up this blog, I wanted a way to implement a page theme. There are plenty of UI frameworks that support this out of the box. [Chakra UI](https://chakra-ui.com) and [Material UI](https://material-ui.com) are two of my favorites, but I thought integrating either one of these would be overkill. 
