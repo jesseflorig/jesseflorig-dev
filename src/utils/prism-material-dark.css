@@ -27,6 +27,11 @@ pre[class*="language-"] {
 	hyphens: none;
 }
 
+.dark code[class*="language-"],
+.dark pre[class*="language-"] {
+  background: rgba(0,0,0,0.4)
+}
+
 code[class*="language-"]::-moz-selection,
 pre[class*="language-"]::-moz-selection,
 code[class*="language-"] ::-moz-selection,
@@ -47,9 +52,13 @@ pre > code[class*="language-"] {
 
 :not(pre) > code[class*="language-"] {
 	white-space: normal;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0,0,0,0.8);
 	border-radius: 0.2em;
 	padding: 0.1em 0.3em;
+}
+
+.dark :not(pre) > code[class*="language-"] {
+  background: rgba(0,0,0,0.4)
 }
 
 pre[class*="language-"] {

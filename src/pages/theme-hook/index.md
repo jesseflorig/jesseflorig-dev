@@ -36,7 +36,7 @@ export default function(){
   return [theme, toggleTheme]
 }
 ```
-This allows us use `theme` anywhere we want, and it will reactively toggle anytime we call `toggleTheme()`. If our toggle logic gets more complicated (it will), we just update `toggleTheme()`.
+This allows us to use `theme` anywhere we want, and it will reactively toggle whenever we call `toggleTheme()`. If our toggle logic gets more complicated (it will), we just update `toggleTheme()`.
 
 ## Adding local persistence
 
@@ -114,4 +114,4 @@ export default function(){
   return [theme, toggleTheme]
 }
 ```
-With our latest changes pushed, our deploys are now completing successfully! 👏
+With our latest changes pushed, our deploy is successful! 
