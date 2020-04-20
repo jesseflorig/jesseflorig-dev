@@ -8,7 +8,7 @@ When setting up this blog, I wanted a way to implement a page theme. There are p
 
 Virtually, the entire theme of this site lives in a [Typography.js](https://kyleamathews.github.io/typography.js) config, so I decided the best solution would be to figure out how to add a `css±.dark` class name to the `html±<body>` tag. Then, all I would need to do is add a couple `css±.dark` classes to my theme.
 
-And before we get started, the last requirement for our theme is stay persistent between page loads. That way, if a user comes back to the site, the theme is automatically set to their preferred theme. For this, we can use `localStorage` ([MDN Docs](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)).
+And before we get started, the last requirement for our theme is persistence between page loads. That way, if a user comes back to the site, the theme is automatically set to their preferred theme. For this, we can use `localStorage` ([MDN Docs](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)).
 
 ## Hooked on hooks
 
