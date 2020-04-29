@@ -14,7 +14,7 @@ I know, it looks so dumb written out. And who the hell do I think I am, that I h
 
 ## A reference for anyone that wants it
 
-I've been fortunate in my career. Over the years, I've had the pleasure of mentoring a few budding developers. Some friends, some colleagues, and the occasional stranger referred by the former.And even though I have a tendency to attribute my successes to a lot of dumb luck (*classic privilege move*), thats a pretty bullshit way to look at it. First of all, that isn't helpful to anyone that desires a similar outcome. Maybe more importantly, can you even appreciate something that hasn't been properly reflected on?
+I've been fortunate in my career. Over the years, I've had the pleasure of mentoring a few budding developers. Some friends, some colleagues, and the occasional stranger referred by the former. And even though I have a tendency to attribute my successes to a lot of dumb luck (*classic privilege move*), thats a pretty bullshit way to look at it. First of all, that isn't helpful to anyone that desires a similar outcome. Maybe more importantly, can you even appreciate something that hasn't been properly reflected on?
 
 All that to say, I've always wanted a living reference to point people to. It can be overwhelming to fit a ton of info into an email or a lunch conversation for anyone, myself included.
 
