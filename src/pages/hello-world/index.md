@@ -30,7 +30,7 @@ Obviously, there are a handful of things I hope to get out of this:
 
 ## Code of conduct
 
-Finally, I want to create content adhering to a code of conduct that is inclusive to th software developement community, at large. Even though I would not refer to myself as a white guy, every time I've been detained by law enforcement, I've been called in as a caucasian male (*humble brag*). By writing these out, I can come back to it, and if I stray from them, should anyone care, I can be called out accordingly:
+Finally, I want to create content adhering to a code of conduct that is inclusive to the software developement community, at large. Even though I would not refer to myself as a white guy, every time I've been detained by law enforcement, I've been called in as a caucasian male (*humble brag*). By writing these out, I can come back to it, and if I stray from them, should anyone care, I can be called out accordingly:
 
  1. Replace problematic tech jargon with inclusive alternatives
  2. Promote a11y best practices 
