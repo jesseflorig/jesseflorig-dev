@@ -4,7 +4,7 @@ date: "2020-01-04"
 description: "Let's build a persistent toggleable page theme using React hooks."
 ---
 
-When setting up this blog, I wanted a way to implement a page theme. There are plenty of UI frameworks that support this out of the box. [Chakra UI](https://chakra-ui.com) and [Material UI](https://material-ui.com) are two of my favorites, but I thought integrating either one of these would be overkill. 
+When setting up this blog, I wanted a way to implement a page theme. There are plenty of UI frameworks that support this out of the box. [Chakra UI](https://chakra-ui.com) and [Material UI](https://material-ui.com) are two of my favorites, but I thought integrating either one of these was not worth the effort just to get a theme toggle.
 
 Virtually, the entire theme of this site lives in a [Typography.js](https://kyleamathews.github.io/typography.js) config, so I decided the best solution would be to figure out how to add a `css±.dark` class name to the `html±<body>` tag. Then, all I would need to do is add a couple `css±.dark` classes to my theme.
 
@@ -17,7 +17,7 @@ To keep things nice and clean, I want to put all of the logic for this into a [R
 ```js
 const [theme, setTheme] = useState("dark")
 ```
-That is definitely one way to do it, in fact, that's what we'll start with. But stopping there, you're left with implementing your own logic for `js±setTheme()`, and it would be really nice if our hook exposed a `js±toggleTheme()` function instead of a setter. 
+That is definitely one way to do it, in fact, that's what we'll start with. But stopping there, you're left with implementing your own logic for `js±setTheme()`, and it would be really nice if our hook exposed a `js±toggleTheme()` function instead of a setter.
 
 Okay, so given our intended hook API, we end up with our theme hook looking like this:
 ```js
@@ -32,7 +32,7 @@ export default function(){
   }
 
   document.body.className = theme
-  
+
   return [theme, toggleTheme]
 }
 ```
@@ -61,17 +61,17 @@ export default function(){
   }
 
   document.body.className = theme
-  
+
   return [theme, toggleTheme]
 }
 ```
 And now you have a working hook that will provide a `theme` variable and a simple function call that will toggle the `theme` everytime its called. Neat!
 
-When I was developing this locally, the code above worked just fine. And if you plan to deploy the code as part of a client side application, you're good to go. However, when I went to deploy my [Gatsby.js](https://gatsbyjs.org) app, I got deploy error stating that `window` was not defined. 
+When I was developing this locally, the code above worked just fine. And if you plan to deploy the code as part of a client side application, you're good to go. However, when I went to deploy my [Gatsby.js](https://gatsbyjs.org) app, I got deploy error stating that `window` was not defined.
 
 ## Making it work with SSR
 
-Oh, crap. One of the benefits of Gatsby, is that all your pages are rendered by the server before shipping to the client, so when your pages are being built, any client-side browser globals (like `window` or `document`) you're accustomed to will result in errors. In hindsight, this makes sense. 
+Oh, crap. One of the benefits of Gatsby, is that all your pages are rendered by the server before shipping to the client, so when your pages are being built, any client-side browser globals (like `window` or `document`) you're accustomed to will result in errors. In hindsight, this makes sense.
 
 So what do we do? Luckily, the build error points us to a [debug page](https://www.gatsbyjs.org/docs/debugging-html-builds/) that gives us some ways to deal with such errors. It seems like all we need to do is check for those globals before we use them. Since our one-line actions are going to become more complex with these changes, I'm going to factor them out into functions so the main hook logic remains clean and simple:
 ```js
@@ -110,8 +110,8 @@ export default function(){
   }
 
   setBodyClass(newTheme)
-  
+
   return [theme, toggleTheme]
 }
 ```
-With our latest changes pushed, our deploy is successful! 
+With our latest changes pushed, our deployment is successful!
