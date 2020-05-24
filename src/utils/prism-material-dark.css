@@ -129,7 +129,7 @@ pre[class*="language-"] {
 .token.deleted,
 .token.entity {
 	color: #ff6666;
-  background-color: none;
+  background: none;
 }
 
 .token.doctype {
