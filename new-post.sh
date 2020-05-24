@@ -1,4 +1,3 @@
-#!/bin/zsh
 # Check command arguments
 if [ $# == 0 ]
 then
