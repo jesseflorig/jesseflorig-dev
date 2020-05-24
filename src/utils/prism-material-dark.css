@@ -129,6 +129,7 @@ pre[class*="language-"] {
 .token.deleted,
 .token.entity {
 	color: #ff6666;
+  background-color: none;
 }
 
 .token.doctype {
@@ -154,4 +155,3 @@ pre[class*="language-"] {
 .token.variable {
 	color: #ff6666;
 }
-
