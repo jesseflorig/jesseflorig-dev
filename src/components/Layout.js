@@ -76,14 +76,20 @@ const Layout = ({ location, title, children }) => {
             width: `17em`,
           }}
         >
-          <a href="https://twitter.com/jesseflorig">Twitter</a>
-          <a href="https://github.com/jesseflorig">GitHub</a>
-          <a href="https://stackoverflow.com/users/152493/jesse">
+          <a href="https://twitter.com/jesseflorig" target="_new">
+            Twitter
+          </a>
+          <a href="https://github.com/jesseflorig" target="_new">
+            GitHub
+          </a>
+          <a href="https://stackoverflow.com/users/152493/jesse" target="_new">
             StackOverflow
           </a>
         </div>
         <div>
-          <a href="https://jesseflorig.dev/rss.xml">RSS</a>
+          <a href="https://jesseflorig.dev/rss.xml" target="_new">
+            RSS
+          </a>
         </div>
       </footer>
     </div>

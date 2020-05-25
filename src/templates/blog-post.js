@@ -49,8 +49,10 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         </header>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
         <footer>
-          <a href={discussUrl}>Discuss on Twitter</a>
-          <a href={editUrl} style={{ marginLeft: "1em" }}>
+          <a href={discussUrl} target="_new">
+            Discuss on Twitter
+          </a>
+          <a href={editUrl} target="_new" style={{ marginLeft: "1em" }}>
             Edit on GitHub
           </a>
         </footer>
