@@ -1,7 +1,7 @@
 ---
 title: Provider Hell
 date: "2020-02-28"
-description: "Detangle your React App component"
+description: "Detangle your React App component."
 ---
 
 If you're familiar with [React Context Providers](https://reactjs.org/docs/context.html), you know how quickly your `App.js` can turn into something like this:
