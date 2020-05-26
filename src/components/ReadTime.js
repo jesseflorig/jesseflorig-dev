@@ -7,7 +7,7 @@ export default function ReadTime({ minutes }) {
   if (minutes > 30) {
     return (
       <span>
-        <span role="image" aria-label="A glass of whiskey">
+        <span role="img" aria-label="A glass of whiskey">
           🥃
         </span>
         {label}
@@ -19,7 +19,7 @@ export default function ReadTime({ minutes }) {
   return (
     <span>
       <span
-        role="image"
+        role="img"
         aria-label={`${cups} cup${cups === 1 ? "" : "s"} of coffee`}
       >
         {`${new Array(cups).fill("☕️").join("")}`}

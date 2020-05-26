@@ -23,7 +23,7 @@ const ReadTime = ({minutes}) => {
     <span>
       // highlight-start
       <span
-        role="image"
+        role="img"
         aria-label={`${cups} cup${cups === 1 ? "" : "s"} of coffee`}
       >
         {`${new Array(cups).fill("☕️").join("")}`}
@@ -47,7 +47,7 @@ const ReadTime = ({minutes}) => {
   if(minutes > 30){
     return (
       <span>
-        <span role="image" aria-label="A glass of whiskey">
+        <span role="img" aria-label="A glass of whiskey">
          🥃
         </span>
         {label}
@@ -60,7 +60,7 @@ const ReadTime = ({minutes}) => {
   return (
     <span>
       <span
-        role="image"
+        role="img"
         aria-label={`${cups} cup${cups === 1 ? "" : "s"} of coffee`}
       >
         {`${new Array(cups).fill("☕️").join("")}`}
