@@ -89,4 +89,4 @@ The answer is that you don't need a function to determine how to choose between 
 
 ## Next steps
 
-This post focused on how to keep the function implementation dry, but next time we'll look at how we can keep the rest of our application DRY when using it a la curried functions!
+This post focused on how to keep the function implementation DRY, but next time we'll look at how we can keep the rest of our application DRY by converting it to a curried function!
